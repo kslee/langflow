@@ -1,0 +1,54 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"TestFlowNoNodes-1750876800\", \"description\": \"Flow without nodes for testing has_data=false\"}",
+    "ResponseBody": "{\"id\": \"b2c3d4e5-f6a7-8901-bcde-f12345678901\", \"name\": \"TestFlowNoNodes-1750876800\", \"has_data\": false, \"data\": null}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/v1/flows/",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 8094,
+    "Timestamp": "2026-06-25T19:13:10.241Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"b2c3d4e5-f6a7-8901-bcde-f12345678901\", \"name\": \"TestFlowNoNodes-1750876800\", \"has_data\": false}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/v1/flows/b2c3d4e5-f6a7-8901-bcde-f12345678901",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 8094,
+    "Timestamp": "2026-06-25T19:13:10.241Z",
+    "Scheme": "http"
+  }
+]
