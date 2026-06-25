@@ -1,0 +1,54 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\":\"summary-baseline-flow\",\"data\":{\"nodes\":[],\"edges\":[]}}",
+    "ResponseBody": "{\"id\":\"1\",\"name\":\"summary-baseline-flow\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/v1/flows/",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 8094,
+    "Timestamp": "2026-06-25T19:03:25.493Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"total_messages\":0,\"total_sessions\":0,\"flows_with_messages\":0}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/v1/monitor/messages/summary",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 8094,
+    "Timestamp": "2026-06-25T19:03:25.494Z",
+    "Scheme": "http"
+  }
+]
