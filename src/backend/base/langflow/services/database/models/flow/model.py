@@ -9,7 +9,7 @@ from uuid import UUID, uuid4
 import emoji
 from emoji import purely_emoji
 from lfx.log.logger import logger
-from pydantic import BaseModel, ValidationInfo, field_serializer, field_validator
+from pydantic import BaseModel, ValidationInfo, field_serializer, field_validator, model_validator
 from sqlalchemy import Enum as SQLEnum
 from sqlalchemy import Text, UniqueConstraint, text
 from sqlmodel import JSON, Column, Field, Relationship, SQLModel
@@ -238,7 +238,13 @@ class FlowRead(FlowBase):
     workspace_id: UUID | None = Field(default=None)
     tags: list[str] | None = Field(None, description="The tags of the flow")
     name_key: str | None = Field(None, description="Stable i18n key derived from the original English name")
+    has_data: bool = Field(default=False, description="True when the flow contains at least one node")
 
+    @model_validator(mode="after")
+    def _populate_has_data(self) -> "FlowRead":
+        """Derive has_data from the presence of nodes in the data payload."""
+        self.has_data = bool(self.data and self.data.get("nodes"))
+        return self
 
 class FlowHeader(BaseModel):
     """Model representing a header for a flow - Without the data."""
